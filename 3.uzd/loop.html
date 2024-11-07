@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" id="number1" value="1"></input>
+    <input type="number" id="number2" value="2"></input>
+    <button id="1button">Recive numbers</button>
+    <p id="output"></p>
+    <script>
+     const textbox1 = document.getElementById("number1");
+     const textbox2 = document.getElementById("number2");
+     const mybutton = document.getElementById("1button");
+     const output = document.getElementById("output");
+
+     if (isNaN(number1) || isNaN(number2) || number1 <= 0 || number2 <= 0 || number1 >= number2) {
+                alert('Lūdzu, ievadiet pareizus skaitļus: pirmajam jābūt mazākam par otro, un abiem jābūt naturāliem.');
+                
+                
+            }
+
+            let numbersInRange = [];
+            for (let i = number1 + 1; i < number2; i++) {
+                numbersInRange.push(i);
+            }
+
+            
+            console.log(numbersInRange);
+            output.textContent = 'Skaitļi starp ' + number1 + ' un ' + number2 + ': ' + numbersInRange.join(', ');
+        
+        document.getElementById('checkButton').addEventListener('click', checkNumbers);
+    </script>
+  </body>
+</html>

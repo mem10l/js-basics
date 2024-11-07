@@ -9,12 +9,14 @@
     <input type="text" id="input-text-filter"></input>
     <button id="my-button">click me</button>
     <script>
-        const inputField = document.getElementById("input-text-filter");
-        const my-button = document.getElementById("my-button")
-        console.log(inputField)
-        function printName() {
-            my-button addEventListener("click" + inputField)
-        }
+const inputField = document.getElementById("input-text-filter");
+const myButton = document.getElementById("my-button");
+console.log(inputField);
+function printName() {
+  const inputValue = inputField.value;
+  console.log(inputValue);
+}
+myButton.addEventListener("click", printName);
     </script>
 </body>
 </html>
